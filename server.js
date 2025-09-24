@@ -15,9 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/contactform',require('./routes/contactsheet'))
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGO_URL)
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.log('MongoDB connection error:', err));
+
 
 // Start server
 const PORT = process.env.PORT || 5000;
